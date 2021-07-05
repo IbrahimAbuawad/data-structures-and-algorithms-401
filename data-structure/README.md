@@ -29,6 +29,7 @@ Big O space is O(1) and time is O(n);
   - Insert a node with a given value before a specified node
 - .insertAfter()
   - Insert a node with a given value after a specified node;
+
 - .kthFromEnd()
   - A function that finds the value kth from the end of the linked list
 
@@ -45,4 +46,5 @@ Big O space is O(1) and time is O(n);
   #### code challenge 7
 
   ![](../challenge7.png)
+
 
