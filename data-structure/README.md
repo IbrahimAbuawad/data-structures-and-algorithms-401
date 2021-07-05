@@ -31,3 +31,18 @@ Big O space is O(1) and time is O(n);
   - Insert a node with a given value after a specified node;
 - .kthFromEnd()
   - A function that finds the value kth from the end of the linked list
+
+
+  ## whiteboard
+
+  #### code challenge 5
+
+  ![](../linkedlist1.png)
+  #### code challenge 6
+
+  ![](../challenge6.png)
+
+  #### code challenge 7
+
+  ![](../challenge7.png)
+
