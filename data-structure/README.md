@@ -27,3 +27,10 @@ Big O space is O(1) and time is O(n);
   - Insert a node with a given value before a specified node
 - .insertAfter()
   - Insert a node with a given value after a specified node;
+
+### code challenge 5
+![](../linkedlist1.png)
+
+### code challenge 6
+
+![](../challenge6.png)
