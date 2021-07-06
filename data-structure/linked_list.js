@@ -1,25 +1,25 @@
 'use strict';
 
 class Node {
-  constructor(value) {
+  constructor(value, next = null) {
     this.value = value;
-    this.next = null;
+    this.next = next;
+
   }
 }
 
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size = 0;
   }
-
 
   insert(value) {
     if (!value) {
-      throw new Error('nothing');
+      throw new Error('NO THING');
     }
-    let current = new Node(value);
-    current.next = this.head;
-    this.head = current;
+    this.head = new Node(value, this.head);
+    this.size = this.size + 1;
   }
 
   includes(value) {
@@ -51,22 +51,19 @@ class LinkedList {
     }
     return finalStr += 'NULL';
   }
-
-
   append(value) {
     let current = this.head;
     if (!current) {
       this.head = new Node(value);
+      this.size = this.size + 1;
     } else {
       while (current.next) {
         current = current.next;
       }
       current.next = new Node(value);
-
+      this.size = this.size + 1;
     }
-
   }
-
   insertBefore(value, targetValue) {
     let current = this.head;
     if (current.value === targetValue) {
@@ -78,9 +75,9 @@ class LinkedList {
       let temp = new Node(value);
       temp.next = current.next;
       current.next = temp;
+      this.size = this.size + 1;
     }
   }
-
   insertAfter(value, targetValue) {
     let current = this.head;
     while (current.value !== targetValue) {
@@ -89,25 +86,23 @@ class LinkedList {
     let temp = new Node(value);
     temp.next = current.next;
     current.next = temp;
+    this.size = this.size + 1;
   }
-
-
   kthFromEnd(k) {
-    let llArray = [];
-    let current = this.head;
-    while (current) {
-      llArray.push(current.value);
-      current = current.next;
+    let currentNode = this.head;
+    let count = this.size - 1;
+    while (currentNode) {
+      if (k === count) {
+        return currentNode.value;
+      }
+      count--;
+      currentNode = currentNode.next;
     }
-    llArray.reverse();
-    if (k >= llArray.length || k < 0) {
-      return 'Invalid Input Number';
-    } else {
-      return llArray[k];
-    }
+    return 'Exception';
   }
 
 }
+
 
 module.exports = {
   ll: LinkedList,

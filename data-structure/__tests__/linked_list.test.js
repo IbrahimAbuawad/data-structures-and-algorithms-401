@@ -4,6 +4,7 @@ const linkedListMaster = require('../linked_list');
 
 const linkedList = linkedListMaster.ll;
 const Node = linkedListMaster.node;
+const zip = require('../../JavaScript/zipLists/linked_list').zip;
 
 
 describe('testing linked list instantiation', () => {
@@ -16,11 +17,11 @@ describe('testing linked list instantiation', () => {
 describe('testing insert value function for linked list', () => {
   it('should return a linked list with a new node added', () => {
     const ll = new linkedList;
-    ll.insert(1);
-    ll.insert(2);
-    ll.insert(3);
+    ll.head = new Node(0);
+    ll.head.next = new Node(1);
+    ll.head.next.next = new Node(2);
+    ll.head.next.next.next = new Node(3);
     ll.insert(4);
-
     expect(ll.head.value).toEqual(4);
   });
 });
@@ -31,7 +32,7 @@ describe('testing linked list head points to first node in linked list', () => {
     ll.insert(3);
     ll.insert(2);
     ll.insert(1);
-    
+
     expect(ll.head.value).toEqual(1);
   });
 });
@@ -56,8 +57,9 @@ describe('testing includes function for searching for a specific value in a link
     ll.insert(1);
     expect(ll.includes(3)).toBeTruthy();
   });
-  it('should return false if target value is not present ', () => {
+  it(`should return false if target value is not present`, () => {
     const ll = new linkedList;
+
     ll.insert(3);
     ll.insert(2);
     ll.insert(1);
@@ -83,7 +85,6 @@ describe('testing linked list append function', () => {
     ll.insert(2);
     ll.insert(1);
     ll.append(4);
-
     expect(ll.head.next.next.next.value).toEqual(4);
   });
   it('should add a multiple new nodes to the end of the linked list', () => {
@@ -93,12 +94,10 @@ describe('testing linked list append function', () => {
     ll.insert(1);
     ll.append(4);
     ll.append(5);
-
     expect(ll.head.next.next.next.value).toEqual(4);
     expect(ll.head.next.next.next.next.value).toEqual(5);
   });
 });
-
 describe('testing linked list insertBefore function', () => {
   it('should add a new node before a target value that is the first node of the list', () => {
     const ll = new linkedList;
@@ -106,7 +105,6 @@ describe('testing linked list insertBefore function', () => {
     ll.insert(2);
     ll.insert(1);
     ll.insertBefore(4, 1);
-
     expect(ll.head.value).toEqual(4);
   });
   it('should add a  new node before an existing node in the middle of the linked list', () => {
@@ -116,11 +114,9 @@ describe('testing linked list insertBefore function', () => {
     ll.insert(2);
     ll.insert(1);
     ll.insertBefore(7, 3);
-
     expect(ll.head.next.next.value).toEqual(7);
   });
 });
-
 describe('testing linked list insertAfter function', () => {
   it('should add a new node after a target value that is a middle node in the list', () => {
     const ll = new linkedList;
@@ -129,7 +125,6 @@ describe('testing linked list insertAfter function', () => {
     ll.insert(2);
     ll.insert(1);
     ll.insertAfter(5, 2);
-
     expect(ll.head.next.next.value).toEqual(5);
   });
   it('should add a new node before the last node of the linked list', () => {
@@ -138,11 +133,10 @@ describe('testing linked list insertAfter function', () => {
     ll.insert(2);
     ll.insert(1);
     ll.insertAfter(4, 3);
-
     expect(ll.head.next.next.next.value).toEqual(4);
   });
-});
 
+});
 describe('testing linked list kthFromEnd function', () => {
   it('should return invalid input string if k is greater than the length of the list', () => {
     const ll = new linkedList;
@@ -150,7 +144,7 @@ describe('testing linked list kthFromEnd function', () => {
     ll.insert(3);
     ll.insert(2);
     ll.insert(1);
-    expect(ll.kthFromEnd(5)).toEqual('Invalid Input Number');
+    expect(ll.kthFromEnd(5)).toEqual('Exception');
   });
 
   it('should return invalid input string if k is the length of the list because index starts at 0', () => {
@@ -160,7 +154,7 @@ describe('testing linked list kthFromEnd function', () => {
     ll.insert(2);
     ll.insert(1);
 
-    expect(ll.kthFromEnd(4)).toEqual('Invalid Input Number');
+    expect(ll.kthFromEnd(4)).toEqual('Exception');
   });
 
   it('should return invalid input string if k is a negative number', () => {
@@ -170,7 +164,7 @@ describe('testing linked list kthFromEnd function', () => {
     ll.insert(2);
     ll.insert(1);
 
-    expect(ll.kthFromEnd(-2)).toEqual('Invalid Input Number');
+    expect(ll.kthFromEnd(-2)).toEqual('Exception');
   });
 
   it('should return the only value if the linked list has one node and k = 0', () => {
@@ -189,3 +183,4 @@ describe('testing linked list kthFromEnd function', () => {
     expect(ll.kthFromEnd(2)).toEqual(2);
   });
 });
+
