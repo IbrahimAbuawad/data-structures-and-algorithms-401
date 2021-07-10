@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1625594925563" clover="3.2.0">
-  <project timestamp="1625594925563" name="All files">
-    <metrics statements="86" coveredstatements="79" conditionals="27" coveredconditionals="20" methods="11" coveredmethods="11" elements="124" coveredelements="110" complexity="0" loc="86" ncloc="86" packages="2" files="2" classes="2"/>
+<coverage generated="1625953786789" clover="3.2.0">
+  <project timestamp="1625953786789" name="All files">
+    <metrics statements="127" coveredstatements="117" conditionals="43" coveredconditionals="34" methods="21" coveredmethods="20" elements="191" coveredelements="171" complexity="0" loc="127" ncloc="127" packages="3" files="4" classes="4"/>
     <package name="JavaScript.zipLists">
       <metrics statements="27" coveredstatements="24" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
       <file name="linked_list.js" path="/home/ibrahimabuawad/codefellows/401-js/data-structures-and-algorithms-401/JavaScript/zipLists/linked_list.js">
@@ -35,12 +35,62 @@
         <line num="60" count="2" type="stmt"/>
       </file>
     </package>
+    <package name="Stack-and-Queues">
+      <metrics statements="41" coveredstatements="38" conditionals="16" coveredconditionals="14" methods="10" coveredmethods="9"/>
+      <file name="queue.js" path="/home/ibrahimabuawad/codefellows/401-js/data-structures-and-algorithms-401/Stack-and-Queues/queue.js">
+        <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="12" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="22" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+      </file>
+      <file name="stack.js" path="/home/ibrahimabuawad/codefellows/401-js/data-structures-and-algorithms-401/Stack-and-Queues/stack.js">
+        <metrics statements="20" coveredstatements="17" conditionals="8" coveredconditionals="6" methods="5" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="15" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="data-structure">
       <metrics statements="59" coveredstatements="55" conditionals="17" coveredconditionals="13" methods="9" coveredmethods="9"/>
       <file name="linked_list.js" path="/home/ibrahimabuawad/codefellows/401-js/data-structures-and-algorithms-401/data-structure/linked_list.js">
         <metrics statements="59" coveredstatements="55" conditionals="17" coveredconditionals="13" methods="9" coveredmethods="9"/>
-        <line num="5" count="96" type="stmt"/>
-        <line num="6" count="96" type="stmt"/>
+        <line num="5" count="124" type="stmt"/>
+        <line num="6" count="124" type="stmt"/>
         <line num="13" count="30" type="stmt"/>
         <line num="14" count="30" type="stmt"/>
         <line num="18" count="60" type="cond" truecount="1" falsecount="1"/>
@@ -97,7 +147,7 @@
         <line num="98" count="13" type="stmt"/>
         <line num="99" count="13" type="stmt"/>
         <line num="101" count="3" type="stmt"/>
-        <line num="107" count="2" type="stmt"/>
+        <line num="107" count="4" type="stmt"/>
       </file>
     </package>
   </project>
