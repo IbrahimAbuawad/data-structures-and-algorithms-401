@@ -39,7 +39,7 @@ class PseudoQueue{
   }
   enqueue(value){
     this.back.push(value);
-    return this;
+    return;
   }
 
 
