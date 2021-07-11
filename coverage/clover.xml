@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1626033535082" clover="3.2.0">
-  <project timestamp="1626033535082" name="All files">
+<coverage generated="1626035407373" clover="3.2.0">
+  <project timestamp="1626035407373" name="All files">
     <metrics statements="88" coveredstatements="28" conditionals="23" coveredconditionals="4" methods="16" coveredmethods="7" elements="127" coveredelements="39" complexity="0" loc="88" ncloc="88" packages="2" files="2" classes="2"/>
     <package name="Queues-with-Stack">
       <metrics statements="29" coveredstatements="25" conditionals="6" coveredconditionals="3" methods="7" coveredmethods="6"/>

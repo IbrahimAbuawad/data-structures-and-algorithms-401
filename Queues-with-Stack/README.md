@@ -20,6 +20,9 @@ Big O space is O(n) and time is O(1);
  - .dequeue()
 
   
+  ## whiteboard 
+
+  ![f](../pseudoQueue_Whiteboard.png)
 
 
 
