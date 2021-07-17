@@ -23,5 +23,5 @@ Big O space is O(n) and time is O(1);
   
   ## whiteboard 
 
- ![](./trees.PNG)
+ ![](./treesEdit.PNG)
 
