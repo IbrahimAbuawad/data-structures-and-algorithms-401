@@ -65,4 +65,21 @@ describe('Tests binary tree and binary tree search', () => {
 
     expect(postOrder).toEqual([5, 2, 9]);
   });
+
+  test('Can successfully return a the max value of tree', () => {
+
+    bTree.root = new binaryTree.node(9);
+    bTree.root.left = new binaryTree.node(5);
+    bTree.root.right = new binaryTree.node(2);
+    bTree.root.right.left = new binaryTree.node(10);
+    bTree.root.right.left.left = new binaryTree.node(8);
+
+  
+    const maxTree = bTree.maxTree();
+  
+    expect(maxTree).toEqual(10);
+  });
+  
+
 });
+
