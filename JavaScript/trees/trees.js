@@ -170,6 +170,56 @@ class BinaryTree {
 
     return flattenArray(iteration);
   }
+
+
+
+  fizzBuzzKaryTree(tree) {
+    //  k_arr = this.preOrder();
+
+    // for (let i = 0; i < k_arr.length; i++) {
+
+    //   if (k_arr[i] % 3 === 0 && k_arr[i] % 5 === 0) {
+    //     k_arr[i] = 'FizzBuzz';
+
+    //   } else if (k_arr[i] % 3 === 0) {
+    //     k_arr[i] = 'Fizz';
+
+    //   } else if (k_arr[i] % 5 === 0) {
+    //     k_arr[i] = 'Buzz';
+
+    //   } else {
+    //     k_arr[i] = `${k_arr[i]}`;
+    //   }
+    // }
+
+    // return k_arr;
+
+    let newTree = tree;
+    const _traverse = (node) => {
+      
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+
+      if (node.value % 3 === 0 && node.value % 5 === 0) {
+        node.value = 'FizzBuzz';
+  
+      } else if (node.value % 3 === 0) {
+        node.value = 'Fizz';
+  
+      } else if (node.value % 5 === 0) {
+        node.value = 'Buzz';
+  
+      } else {
+        node.value = `${node.value}`;
+      }
+    }
+    
+    _traverse(newTree.root);
+
+    return newTree;
+  }
+
+
 }
 
 
