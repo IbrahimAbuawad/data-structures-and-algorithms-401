@@ -74,12 +74,12 @@ describe('Tests binary tree and binary tree search', () => {
     bTree.root.right.left = new binaryTree.node(10);
     bTree.root.right.left.left = new binaryTree.node(8);
 
-  
+
     const maxTree = bTree.maxTree();
-  
+
     expect(maxTree).toEqual(10);
   });
-  
+
   test('Traverses breadth-first', () => {
 
     bTree.root = new binaryTree.node(15);
@@ -100,5 +100,25 @@ describe('Tests binary tree and binary tree search', () => {
 
     expect(breadthTest).toEqual([15, 5, 20, 4, 8, 28, 30, 3, 14, 12, 133]);
   });
+  test('fizzBuzzKaryTree', () => {
+
+    bTree.root = new binaryTree.node(15);
+
+    bTree.root.left = new binaryTree.node(5);
+    bTree.root.left.left = new binaryTree.node(4);
+    bTree.root.left.right = new binaryTree.node(8);
+    bTree.root.left.right.left = new binaryTree.node(3);
+    bTree.root.left.right.right = new binaryTree.node(14);
+
+    bTree.root.right = new binaryTree.node(20);
+    bTree.root.right.left = new binaryTree.node(28);
+    bTree.root.right.right = new binaryTree.node(30);
+    bTree.root.right.right.left = new binaryTree.node(12);
+    bTree.root.right.right.right = new binaryTree.node(133);
+    const breadthTest = bTree.fizzBuzzKaryTree(bTree);
+    let k_arr = breadthTest.preOrder();
+    expect(k_arr).toEqual(['FizzBuzz', 'Buzz', '4', '8', 'Fizz', '14', 'Buzz', '28', 'FizzBuzz', 'Fizz', '133']);
+  });
+
 });
 
